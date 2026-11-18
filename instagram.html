@@ -1,0 +1,8 @@
+{{ with .Params.instagram }}
+<section class="instagram">
+  <h2>{{ i18n "latest_post" }}</h2>
+  <blockquote class="instagram-media" data-instgrm-permalink="{{ . }}" data-instgrm-version="14"></blockquote>
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <p><a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "read_instagram" }}</a></p>
+</section>
+{{ end }}

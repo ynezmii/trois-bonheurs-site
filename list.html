@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="page">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <div class="grid">
+    {{ range .Pages }}
+    <figure class="card">
+      {{ with .Params.image }}<img src="{{ relURL . }}" alt="" loading="lazy">{{ end }}
+      <figcaption>
+        <strong>{{ .Title }}</strong>
+        <span>{{ .Params.year }} · {{ .Params.medium }} · {{ .Params.size }}</span>
+        <span class="status">{{ if eq .Params.status "sold" }}{{ i18n "status_sold" }}{{ else }}{{ i18n "status_available" }}{{ end }}</span>
+        {{ if ne .Params.status "sold" }}<a class="inquire" href="mailto:{{ site.Params.contactEmail }}?subject={{ .Title | urlquery }}">{{ i18n "ask_price" }}</a>{{ end }}
+      </figcaption>
+    </figure>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

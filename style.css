@@ -1,0 +1,36 @@
+:root { --ink: #1d1d1b; --paper: #faf8f4; --muted: #6b6b66; --accent: #8b2e2e; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Noto Serif TC", "Noto Serif JP", Georgia, serif; color: var(--ink); background: var(--paper); line-height: 1.7; }
+a { color: inherit; }
+.site-header { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; border-bottom: 1px solid #e4e0d8; }
+.brand { font-weight: 600; text-decoration: none; letter-spacing: .04em; }
+.site-header nav { display: flex; gap: 1.25rem; }
+.site-header nav a { text-decoration: none; color: var(--muted); }
+.site-header nav a:hover { color: var(--ink); }
+.langs { display: flex; gap: .75rem; font-size: .9rem; }
+.langs a { text-decoration: none; color: var(--muted); }
+.langs a[aria-current="true"] { color: var(--accent); font-weight: 600; }
+main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.hero { text-align: center; padding: 3rem 0; }
+.cards { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
+.card-link { padding: .9rem 1.4rem; border: 1px solid var(--ink); text-decoration: none; }
+.card-link:hover { background: var(--ink); color: var(--paper); }
+.page h1 { font-weight: 500; margin-bottom: .5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.card { margin: 0; }
+.card img { width: 100%; height: auto; display: block; background: #e9e6df; min-height: 160px; }
+.card figcaption { display: flex; flex-direction: column; font-size: .9rem; margin-top: .5rem; color: var(--muted); }
+.card figcaption strong { color: var(--ink); font-weight: 500; }
+.card .status, .card .price { font-size: .85rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; margin: 1.5rem 0 0; }
+.filters label { display: flex; flex-direction: column; font-size: .85rem; color: var(--muted); }
+.filters select { margin-top: .25rem; padding: .4rem .5rem; font: inherit; background: #fff; border: 1px solid #cfcac0; }
+.count { margin: 0; font-size: .85rem; color: var(--muted); }
+.empty { grid-column: 1 / -1; color: var(--muted); }
+.instagram { margin-top: 3rem; }
+.instagram blockquote { margin: 1rem auto; max-width: 540px; }
+.site-footer { text-align: center; font-size: .85rem; color: var(--muted); padding: 2rem 1rem; }
+@media (max-width: 600px) { .site-header nav { gap: .8rem; } }
+
+.inquire { display: inline-block; margin-top: .4rem; padding: .3rem .7rem; border: 1px solid var(--ink); text-decoration: none; font-size: .85rem; align-self: flex-start; }
+.inquire:hover { background: var(--ink); color: var(--paper); }

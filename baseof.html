@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ i18n "site_title" }}{{ else }}{{ .Title }} · {{ i18n "site_title" }}{{ end }}</title>
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  {{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="{{ "" | relLangURL }}">{{ i18n "site_title" }}</a>
+  <nav>
+    <a href="{{ "about/" | relLangURL }}">{{ i18n "nav_about" }}</a>
+    <a href="{{ "paintings/" | relLangURL }}">{{ i18n "nav_paintings" }}</a>
+    <a href="{{ "photography/" | relLangURL }}">{{ i18n "nav_photos" }}</a>
+  </nav>
+  <div class="langs">
+    {{ range .AllTranslations }}
+    <a href="{{ .RelPermalink }}" {{ if eq .Language.Lang $.Language.Lang }}aria-current="true"{{ end }}>{{ .Language.LanguageName }}</a>
+    {{ end }}
+  </div>
+</header>
+
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-footer">© {{ now.Year }} {{ i18n "site_title" }}</footer>
+<script src="{{ "js/filter.js" | relURL }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+baseURL = "https://your-site.netlify.app/"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+
+[params]
+  contactEmail = "your-email@example.com"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  [languages.zh-tw]
+    languageName = "中文"
+    weight = 2
+  [languages.fr]
+    languageName = "Français"
+    weight = 3
