@@ -1,4 +1,4 @@
 ---
-title: "trois bonheurs par jour"
+title: "Trois Bonheurs Par Jour"
 ---
-Three small joys a day: film photographs and oil paintings.
+Three lovely things before bed keep you thriving.

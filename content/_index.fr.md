@@ -1,4 +1,4 @@
 ---
-title: "trois bonheurs par jour"
+title: "Trois Bonheurs Par Jour"
 ---
-Trois petits bonheurs par jour : photographies argentiques et peintures à l'huile.
+Trois belles choses avant de dormir te font t'épanouir.
