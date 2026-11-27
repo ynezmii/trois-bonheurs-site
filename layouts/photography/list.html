@@ -4,6 +4,7 @@
   {{ .Content }}
 
   <div class="filters">
+    <label>{{ i18n "filter_album" }}<select data-kind="album"></select></label>
     <label>{{ i18n "filter_ym" }}<select data-kind="ym"></select></label>
     <label>{{ i18n "filter_camera" }}<select data-kind="camera"></select></label>
     <label>{{ i18n "filter_film" }}<select data-kind="film"></select></label>
@@ -20,6 +21,7 @@
   <div class="grid" data-filter-grid data-all="{{ i18n "all" }}" data-no-results="{{ i18n "no_results" }}">
     {{ range .Pages }}
     <figure class="card photo" data-item
+      data-album="{{ .Params.album }}"
       data-ym="{{ .Date.Format "2006-01" }}"
       data-camera="{{ .Params.camera }}"
       data-film="{{ .Params.film }}"
