@@ -1,10 +1,6 @@
 {{ define "main" }}
 <section class="hero">
   {{ .Content }}
-  <nav class="cards">
-    <a class="card-link" href="{{ "about/" | relLangURL }}">{{ i18n "explore_about" }}</a>
-    <a class="card-link" href="{{ "paintings/" | relLangURL }}">{{ i18n "explore_paintings" }}</a>
-    <a class="card-link" href="{{ "photography/" | relLangURL }}">{{ i18n "explore_photos" }}</a>
-  </nav>
+  <a class="hero-photo" href="{{ "photography/" | relLangURL }}"><img src="{{ "images/home.jpg" | relURL }}" alt=""></a>
 </section>
 {{ end }}
